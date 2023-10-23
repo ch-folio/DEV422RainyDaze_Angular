@@ -4,75 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>InClassV1</title>
-    <style>
-        .search-bar {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        .search-button {
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-
-        .result-container {
-            margin-top: 20px;
-        }
-
-        .result-item {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #f9f9f9;
-        }
-
-        .result-item h3 {
-            margin-top: 0;
-        }
-
-        .result-item p {
-            margin-bottom: 0;
-        }
-    </style>
+    <title>Rainy Daze</title>
+    <app-root></app-root>
 </head>
 <body>
-    <div>
-        <input type="text" class="search-bar" placeholder="Search...">
-        <button class="search-button">Search</button>
-    </div>
-    <div class="result-container">
-        <div class="result-item">
-            <h3>Result Title 1</h3>
-            <p>Result description or snippet here...</p>
-        </div>
-        <div class="result-item">
-            <h3>Result Title 2</h3>
-            <p>Result description or snippet here...</p>
-        </div>
-        <!-- Add more result items as needed -->
-    </div>
-  <script>
-        // JavaScript code for filtering
-        document.querySelector('.search-button').addEventListener('click', function() {
-            // Get user's search query
-            const searchQuery = document.querySelector('.search-bar').value;
-
-            // Perform search based on the query
-            // Update result-container with filtered results
-        });
-
-        // Add event listener for checkbox changes
-        const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
-        filterCheckboxes.forEach(function(checkbox) {
-            checkbox.addEventListener('change', function() {
-                const filterType = this.value;
-
-                // Implement filtering logic based on the selected criteria
-                // Update result-container with filtered results
-            });
-        });
-    </script>
 </body>
 </html>
