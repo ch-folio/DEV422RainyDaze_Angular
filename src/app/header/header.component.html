@@ -1,16 +1,61 @@
 <body>
-<header>
-    <div class="container">
-        <a href="#" routerLink="/" class="logo">Rainy Daze</a>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#" routerLink="/cart-page">Cart</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    </header>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo"><a routerLink=""><img src="assets/images/rainwear_photos/logo.png" alt="logo"/></a></div>
+                <div class="cart">
+                    <a routerLink="/cart-page">
+                      <span class="cart-text">CART</span>
+                      <!-- <img src="assets/images/rainwear_photos/shopping-cart-solid.svg" class="cart_img" /> -->
+                    </a>
+                  </div>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">OUTERWEAR</a>
+                        <div class="dropdown-content options">
+                        <li><a routerLink="/outer1">Rain Jackets</a></li>
+                        <li><a routerLink="/outer2">Winter Jackets</a></li>
+                        <li><a routerLink="/outer3">Puffer Jackets</a></li>
+                        <li><a routerLink="/outer4">Parkas</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">TOPS</a>
+                        <div class="dropdown-content options">
+                        <li><a routerLink="/tops1">Shirts</a></li>
+                        <li><a routerLink="/tops2">Vests</a></li>
+                        <li><a routerLink="/tops3">Sweaters</a></li>
+                        <li><a routerLink="/tops4">Thermal Shirts</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">BOTTOMS</a>
+                        <div class="dropdown-content options">
+                        <li><a routerLink="/bottoms1">Pants</a></li>
+                        <li><a routerLink="/bottoms2">Leggings</a></li>
+                        <li><a routerLink="/bottoms3">Thermal Pants</a></li>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">FOOTWEAR</a>
+                        <div class="dropdown-content options">
+                        <li><a routerLink="/footwear1">Sneakers</a></li>
+                        <li><a routerLink="/footwear2">Boots</a></li>
+                        <li><a routerLink="/footwear3">Slippers</a></li>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">ACCESSORIES</a>
+                        <div class="dropdown-content options">
+                        <li><a routerLink="/accessories1">Gloves</a></li>
+                        <li><a routerLink="/accessories2">Hats</a></li>
+                        <li><a routerLink="/accessories3">Umbrellas</a></li>
+                        </div>
+                        </li>
+                </ul>
+            </nav>
+        </div>
+        </header>
         <div>
             <input type="text" class="search-bar" placeholder="Search...">
             <button class="search-button">Search</button>
@@ -26,64 +71,4 @@
             </div>
             <!-- Add more result items as needed -->
         </div>
-        <style>
-            .search-bar {
-                width: 100%;
-                padding: 10px;
-                font-size: 16px;
-            }
-    
-            .search-button {
-                padding: 10px 20px;
-                font-size: 16px;
-            }
-    
-            .result-container {
-                margin-top: 20px;
-            }
-    
-            .result-item {
-                border: 1px solid #ccc;
-                padding: 10px;
-                margin-bottom: 10px;
-                background-color: #f9f9f9;
-            }
-    
-            .result-item h3 {
-                margin-top: 0;
-            }
-    
-            .result-item p {
-                margin-bottom: 0;
-            }
-
-            button {
-                background: linear-gradient(to right, #87CEEB, #191970);
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 4px;
-            }
-        </style>
-      <script>
-            // JavaScript code for filtering
-            document.querySelector('.search-button').addEventListener('click', function() {
-                // Get user's search query
-                const searchQuery = document.querySelector('.search-bar').value;
-    
-                // Perform search based on the query
-                // Update result-container with filtered results
-            });
-    
-            // Add event listener for checkbox changes
-            const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
-            filterCheckboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', function() {
-                    const filterType = this.value;
-    
-                    // Implement filtering logic based on the selected criteria
-                    // Update result-container with filtered results
-                });
-            });
-        </script>
-    </body>
+        </body>
