@@ -94,6 +94,11 @@ button {
     height: 25px;
 } */
 
+
+.cart {
+    padding: 25px;
+}
+
 .dropdown-content {
     background-color: whitesmoke;
     display: none;
@@ -138,6 +143,7 @@ button {
 }
 
 .navbar {
+<<<<<<< HEAD
     margin-bottom: -25px;
 }
 
@@ -177,4 +183,7 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
+=======
+    margin-bottom: 40px;
+>>>>>>> 46b3c41bc91f6858411c740e3509e619140c9ea2
 }
