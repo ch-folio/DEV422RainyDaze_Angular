@@ -21,6 +21,7 @@ import { Footwear3Component } from './footwear3/footwear3.component';
 import { Accessories1Component } from './accessories1/accessories1.component';
 import { Accessories2Component } from './accessories2/accessories2.component';
 import { Accessories3Component } from './accessories3/accessories3.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { Accessories3Component } from './accessories3/accessories3.component';
     Accessories1Component,
     Accessories2Component,
     Accessories3Component,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
