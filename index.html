@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>InClassV1</title>
     <style>
-        .search-bar {
+         .search-bar {
             width: 100%;
             padding: 10px;
             font-size: 16px;
@@ -111,10 +111,10 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#">Rain Coats</a>
-                <a href="#">Umbrella</a>
-                <a href="#">Sweaters</a>
-                <a href="#">Rain Boots</a>
+                <a href="/products/rain-coats">Rain Coats</a>
+                <a href="/products/umbrella">Umbrella</a>
+                <a href="/products/sweaters">Sweaters</a>
+                <a href="/products/rain-boots">Rain Boots</a>
             </div>
         </div>
     </div>
@@ -124,40 +124,29 @@
         <button class="search-button">Search</button>
     </div>
     <div class="result-container">
-        <div class="result-item">
-            <h3>Result Title 1</h3>
-            <p>Result description or snippet here...</p>
-        </div>
-        <div class="result-item">
-            <h3>Result Title 2</h3>
-            <p>Result description or snippet here...</p>
-        </div>
-        <!-- Add more result items as needed -->
+        <!-- Product view content will be dynamically generated here based on the selected category -->
     </div>
-  <div class="cart-container">
-    <h2>Your Shopping Cart</h2>
-    <div class="cart-item">
-        <img src="product1.jpg" alt="Product 1">
-        <div class="cart-item-description">
-            <h3>Zando Beanie Hats</h3>
-            <p>Material: ...</p>
+    <div class="cart-container">
+        <h2>Your Shopping Cart</h2>
+        <div class="cart-item">
+            <img src="product1.jpg" alt="Product 1">
+            <div class="cart-item-description">
+                <h3>Zando Beanie Hats</h3>
+                <p>Material: ...</p>
+            </div>
+            <div class="cart-item-quantity">
+                Quantity: <input type="number" min="1" value="1">
+            </div>
+            <div class="cart-item-price">$9.49</div>
+            <div class="cart-item-remove">Remove</div>
         </div>
-        <div class="cart-item-quantity">
-            Quantity: <input type="number" min="1" value="1">
+        <!-- Add more cart items as needed -->
+        <div class="cart-total">
+            <h2>Total:</h2>
+            <div class="total-price">$9.49</div>
         </div>
-        <div class="cart-item-price">$9.49</div>
-        <div class="cart-item-remove">Remove</div>
+        <a href="#" class="checkout-button">Proceed to Checkout</a>
     </div>
-
-    <!-- Add more cart items as needed -->
-
-    <div class="cart-total">
-        <h2>Total:</h2>
-        <div class="total-price">$9.49</div>
-    </div>
-
-    <a href="#" class="checkout-button">Proceed to Checkout</a>
-</div>
     <script>
         // JavaScript code for filtering
         document.querySelector('.search-button').addEventListener('click', function () {
@@ -181,4 +170,4 @@
     </script>
 </body>
 
-</html>                                          
+</html>                                   
