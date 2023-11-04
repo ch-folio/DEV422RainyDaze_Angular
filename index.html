@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>InClassV1</title>
+    <title>InClassV1 - Product Details</title>
     <style>
-         .search-bar {
+          .search-bar {
             width: 100%;
             padding: 10px;
             font-size: 16px;
@@ -119,12 +119,12 @@
         </div>
     </div>
     <br />
-    <div>
-        <input type="text" class="search-bar" placeholder="Search...">
-        <button class="search-button">Search</button>
-    </div>
-    <div class="result-container">
-        <!-- Product view content will be dynamically generated here based on the selected category -->
+    <div class="product-details">
+        <h2>Product Title</h2>
+        <img src="product_image.jpg" alt="Product Image">
+        <p>Product description goes here...</p>
+        <p>Price: $XX.XX</p>
+        <button class="add-to-cart-button">Add to Cart</button>
     </div>
     <div class="cart-container">
         <h2>Your Shopping Cart</h2>
@@ -148,23 +148,18 @@
         <a href="#" class="checkout-button">Proceed to Checkout</a>
     </div>
     <script>
-        // JavaScript code for filtering
-        document.querySelector('.search-button').addEventListener('click', function () {
-            // Get user's search query
-            const searchQuery = document.querySelector('.search-bar').value;
-
-            // Perform search based on the query
-            // Update result-container with filtered results
+        // JavaScript code for adding a product to the cart
+        document.querySelector('.add-to-cart-button').addEventListener('click', function () {
+            // Get product details and add it to the cart
+            // Update cart-container with the new cart item
         });
 
-        // Add event listener for checkbox changes
-        const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
-        filterCheckboxes.forEach(function (checkbox) {
-            checkbox.addEventListener('change', function () {
-                const filterType = this.value;
-
-                // Implement filtering logic based on the selected criteria
-                // Update result-container with filtered results
+        // JavaScript code for removing a product from the cart
+        const removeButtons = document.querySelectorAll('.cart-item-remove');
+        removeButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                // Remove the corresponding cart item from the cart
+                // Update cart-container to reflect the removal
             });
         });
     </script>
