@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>InClassV1</title>
+    <title>InClassV1 - Product Details</title>
     <style>
-        .search-bar {
+          .search-bar {
             width: 100%;
             padding: 10px;
             font-size: 16px;
@@ -111,74 +111,58 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#">Rain Coats</a>
-                <a href="#">Umbrella</a>
-                <a href="#">Sweaters</a>
-                <a href="#">Rain Boots</a>
+                <a href="/products/rain-coats">Rain Coats</a>
+                <a href="/products/umbrella">Umbrella</a>
+                <a href="/products/sweaters">Sweaters</a>
+                <a href="/products/rain-boots">Rain Boots</a>
             </div>
         </div>
     </div>
     <br />
-    <div>
-        <input type="text" class="search-bar" placeholder="Search...">
-        <button class="search-button">Search</button>
+    <div class="product-details">
+        <h2>Product Title</h2>
+        <img src="product_image.jpg" alt="Product Image">
+        <p>Product description goes here...</p>
+        <p>Price: $XX.XX</p>
+        <button class="add-to-cart-button">Add to Cart</button>
     </div>
-    <div class="result-container">
-        <div class="result-item">
-            <h3>Result Title 1</h3>
-            <p>Result description or snippet here...</p>
+    <div class="cart-container">
+        <h2>Your Shopping Cart</h2>
+        <div class="cart-item">
+            <img src="product1.jpg" alt="Product 1">
+            <div class="cart-item-description">
+                <h3>Zando Beanie Hats</h3>
+                <p>Material: ...</p>
+            </div>
+            <div class="cart-item-quantity">
+                Quantity: <input type="number" min="1" value="1">
+            </div>
+            <div class="cart-item-price">$9.49</div>
+            <div class="cart-item-remove">Remove</div>
         </div>
-        <div class="result-item">
-            <h3>Result Title 2</h3>
-            <p>Result description or snippet here...</p>
+        <!-- Add more cart items as needed -->
+        <div class="cart-total">
+            <h2>Total:</h2>
+            <div class="total-price">$9.49</div>
         </div>
-        <!-- Add more result items as needed -->
+        <a href="#" class="checkout-button">Proceed to Checkout</a>
     </div>
-  <div class="cart-container">
-    <h2>Your Shopping Cart</h2>
-    <div class="cart-item">
-        <img src="product1.jpg" alt="Product 1">
-        <div class="cart-item-description">
-            <h3>Zando Beanie Hats</h3>
-            <p>Material: ...</p>
-        </div>
-        <div class="cart-item-quantity">
-            Quantity: <input type="number" min="1" value="1">
-        </div>
-        <div class="cart-item-price">$9.49</div>
-        <div class="cart-item-remove">Remove</div>
-    </div>
-
-    <!-- Add more cart items as needed -->
-
-    <div class="cart-total">
-        <h2>Total:</h2>
-        <div class="total-price">$9.49</div>
-    </div>
-
-    <a href="#" class="checkout-button">Proceed to Checkout</a>
-</div>
     <script>
-        // JavaScript code for filtering
-        document.querySelector('.search-button').addEventListener('click', function () {
-            // Get user's search query
-            const searchQuery = document.querySelector('.search-bar').value;
-
-            // Perform search based on the query
-            // Update result-container with filtered results
+        // JavaScript code for adding a product to the cart
+        document.querySelector('.add-to-cart-button').addEventListener('click', function () {
+            // Get product details and add it to the cart
+            // Update cart-container with the new cart item
         });
 
-        // Add event listener for checkbox changes
-        const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
-        filterCheckboxes.forEach(function (checkbox) {
-            checkbox.addEventListener('change', function () {
-                const filterType = this.value;
-
-                // Implement filtering logic based on the selected criteria
-                // Update result-container with filtered results
+        // JavaScript code for removing a product from the cart
+        const removeButtons = document.querySelectorAll('.cart-item-remove');
+        removeButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                // Remove the corresponding cart item from the cart
+                // Update cart-container to reflect the removal
             });
         });
     </script>
 </body>
 
-</html>                                          
+</html>
