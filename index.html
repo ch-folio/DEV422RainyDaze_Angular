@@ -98,6 +98,35 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+      
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-items {
+    margin: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.cart-total {
+    margin: 20px;
+    text-align: right;
+}
     </style>
 </head>
 
@@ -147,6 +176,34 @@
         </div>
         <a href="#" class="checkout-button">Proceed to Checkout</a>
     </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product View</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <header>
+        <h1>Product Name</h1>
+    </header>
+
+    <section class="product-details">
+        <img src="product-image.jpg" alt="Product Image">
+        <div class="details">
+            <h2>Product Name</h2>
+            <p>Product Description Lorem ipsum dolor sit amet...</p>
+            <p>Price: $19.99</p>
+            <button class="add-to-cart" onclick="addItemToCart()">Add to Cart</button>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 RainyDaze
+    </footer>
+
+    <script src="cart.js"></script> <!-- Link to your JavaScript file -->
+    <script>
     <script>
         // JavaScript code for adding a product to the cart
         document.querySelector('.add-to-cart-button').addEventListener('click', function () {
@@ -162,7 +219,94 @@
                 // Update cart-container to reflect the removal
             });
         });
+
+      const cart = [];
+
+// Function to add an item to the cart
+function addItem(product) {
+    const existingItem = cart.find(item => item.product.id === product.id);
+
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({ product, quantity: 1 });
+    }
+
+    updateCart();
+}
+
+// Function to update the cart HTML
+function updateCart() {
+    const cartItemsContainer = document.querySelector('.cart-items');
+    const totalElement = document.getElementById('total');
+
+    // Clear previous items
+    cartItemsContainer.innerHTML = '';
+
+    // Populate cart items
+    cart.forEach(item => {
+        const cartItemElement = document.createElement('div');
+        cartItemElement.className = 'cart-item';
+        cartItemElement.innerHTML = `
+            <span>${item.product.name}</span>
+            <span>Quantity: ${item.quantity}</span>
+            <span>$${item.product.price.toFixed(2)}</span>
+            <button class="edit-button" onclick="editItem('${item.product.id}')">Edit</button>
+            <button class="remove-button" onclick="removeItem('${item.product.id}')">Remove</button>
+        `;
+        cartItemsContainer.appendChild(cartItemElement);
+    });
+
+    // Calculate and display total
+    const total = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
+    totalElement.textContent = total.toFixed(2);
+}
+
+// Function to remove an item from the cart
+function removeItem(productId) {
+    const index = cart.findIndex(item => item.product.id === productId);
+    if (index !== -1) {
+        cart.splice(index, 1);
+        updateCart();
+    }
+}
+
+// Function to edit an item in the cart (you can implement this based on your requirements)
+function editItem(productId) {
+    // Implement the logic to edit the quantity or other details of the item
+    // You may open a modal or navigate to a separate page for editing
+    alert(`Editing item with ID ${productId}`);
+}
     </script>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+
+    <section class="cart-items">
+        <!-- Cart items will be dynamically populated here using JavaScript -->
+    </section>
+
+    <section class="cart-total">
+        <h2>Total: $<span id="total">0.00</span></h2>
+    </section>
+
+    <footer>
+        &copy; 2023 RainyDaze
+    </footer>
+
+    <script src="cart.js"></script> <!-- Link to your JavaScript file -->
+</body>
+
+</html>
 </body>
 
 </html>
