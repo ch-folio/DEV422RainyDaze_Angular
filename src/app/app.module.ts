@@ -24,6 +24,7 @@ import { Accessories3Component } from './accessories3/accessories3.component';
 import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { LogoutComponent } from './logout/logout.component';
     CartComponent,
     LoginComponent,
     LogoutComponent,
+    ProductdetailsComponent,
   ],
   imports: [
     BrowserModule,
