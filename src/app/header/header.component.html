@@ -5,7 +5,7 @@
                 <div class="logo"><a routerLink=""><img src="assets/images/rainwear_photos/logo.png" alt="logo"/></a></div>
                 <div class="cart">
                     <a routerLink="/cart-page"><img src="assets/images/rainwear_photos/shopping-cart-solid.svg" class="cart_img" /></a>
-                      <img src="assets/images/rainwear_photos/user-solid.svg" class="profile_img" />
+                      <a routerLink="/login"><img src="assets/images/rainwear_photos/user-solid.svg" class="profile_img" /></a>
                   </div>
                 <ul>
                     <li class="dropdown">
@@ -54,10 +54,11 @@
             </nav>
         </div>
         </header>
-        <div>
+        <div class="search">
             <input type="text" class="search-bar" placeholder="Search...">
             <!-- <button class="search-button">Search</button> -->
-            <img src="assets/images/rainwear_photos/search-solid.svg" class="search_img" />
+            <div class="search_container"><img src="assets/images/rainwear_photos/search-solid.svg" class="search_img" />
+                </div>
         </div>
         <div class="result-container">
             <div class="result-item">

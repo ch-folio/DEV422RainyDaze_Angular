@@ -19,6 +19,7 @@ import { Accessories1Component } from './accessories1/accessories1.component';
 import { Accessories2Component } from './accessories2/accessories2.component';
 import { Accessories3Component } from './accessories3/accessories3.component';
 import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent },
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'accessories2', component: Accessories2Component },
   { path: 'accessories3', component: Accessories3Component },
   { path: 'cart-page', component: CartComponent },
+  { path: 'login', component: LoginComponent},
 ];
 
 @NgModule({

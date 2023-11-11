@@ -22,6 +22,8 @@ import { Accessories1Component } from './accessories1/accessories1.component';
 import { Accessories2Component } from './accessories2/accessories2.component';
 import { Accessories3Component } from './accessories3/accessories3.component';
 import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { CartComponent } from './cart/cart.component';
     Accessories2Component,
     Accessories3Component,
     CartComponent,
+    LoginComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
