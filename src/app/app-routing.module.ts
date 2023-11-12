@@ -20,6 +20,10 @@ import { Accessories2Component } from './accessories2/accessories2.component';
 import { Accessories3Component } from './accessories3/accessories3.component';
 import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ErrorComponent } from './error/error.component';
+import { UserCardComponent } from './user-card/user-card.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent },
@@ -41,7 +45,11 @@ const routes: Routes = [
   { path: 'accessories2', component: Accessories2Component },
   { path: 'accessories3', component: Accessories3Component },
   { path: 'cart-page', component: CartComponent },
-  { path: 'login', component: LoginComponent},
+  { path: 'login', component: LoginComponent },
+  {path: 'dashboard', component: DashboardComponent },
+  {path: 'error', component: ErrorComponent },
+  {path: 'user-card', component: UserCardComponent },
+  {path: 'checkout', component: CheckoutComponent }
 ];
 
 @NgModule({

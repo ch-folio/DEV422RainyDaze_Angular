@@ -1,0 +1,9 @@
+#signout-button {
+    color:#FFFFFF;
+    background-color: #000000;
+    text-align: center;
+    border: none;
+    padding: 1em;
+    width: 8em;
+    cursor: pointer;
+}

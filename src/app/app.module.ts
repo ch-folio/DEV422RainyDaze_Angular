@@ -25,6 +25,11 @@ import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ErrorComponent } from './error/error.component';
+import { UserCardComponent } from './user-card/user-card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -52,10 +57,16 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     LoginComponent,
     LogoutComponent,
     ProductdetailsComponent,
+    DashboardComponent,
+    ErrorComponent,
+    UserCardComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -134,6 +134,13 @@ nav ul li a{
     padding: 25px;
 }
 
+.dash {
+    position: absolute;
+    color: #000000;
+    top: -45px;
+    right: -125px;
+}
+
 .dropdown-content {
     background-color: whitesmoke;
     display: none;

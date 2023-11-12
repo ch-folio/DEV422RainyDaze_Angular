@@ -1,24 +1,53 @@
-<html>
-    <body>
-        <script src="https://accounts.google.com/gsi/client" async></script>
-        <div id="g_id_onload"
-            data-client_id="311112805220-pekanj5bnske7mbe420hi5hchru6lnet.apps.googleusercontent.com"
-            data-context="signin"
-            data-ux_mode="popup"
-            data-login_uri="https://localhost:4200/login"
-            data-auto_prompt="false">
-        </div>
+<form (ngSubmit)="onSubmit()" class="login-form">
+  <div class="username">
+    <label>Username:</label>
+    <input type="text" [(ngModel)]="username" name="username" required />
+  </div>
+  <div class="password">
+    <label>Password:</label>
+    <input type="password" [(ngModel)]="password" name="password" required />
+  </div>
+  <button type="submit" class="submit">Login</button>
+  <br><br>
+  <div
+    id="g_id_onload"
+    data-client_id="311112805220-pekanj5bnske7mbe420hi5hchru6lnet.apps.googleusercontent.com"
+    data-context="use"
+    data-ux_mode="popup"
+    data-itp_support="true"
+    data-callback="handleCredentialResponse"
+  ></div>
+ 
+  <div
+    class="g_id_signin"
+    data-type="standard"
+    data-shape="pill"
+    data-theme="filled_blue"
+    data-text="signin_with"
+    data-size="large"
+    data-logo_alignment="left"
+  ></div>
+</form>
 
-        <div class="g_id_signin"
-            data-type="standard"
-            data-shape="rectangular"
-            data-theme="filled_blue"
-            data-text="signin_with"
-            data-size="large"
-            data-locale="en-US"
-            data-logo_alignment="left">
-        </div>
-        </body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
