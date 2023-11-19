@@ -6,3 +6,23 @@
     <button class="add-to-cart" onclick="addItemToCart()">Add to Cart</button>
 </div>
 
+<script>
+function addItemToCart(category) {
+    // Assuming you have a product object for rainwear
+    const rainwearProduct = {
+        id: 'rainwear1', // Unique product ID
+        name: 'Rainwear Product',
+        price: 29.99,
+        // Add any other relevant details
+    };
+
+    addItem(rainwearProduct); // Call the generic addItem function
+    updateTotal(); // Update the total after adding an item
+}
+
+// Function to update the quantity of an item in the cart from the product page
+function updateQuantityFromPage(productId) {
+    const newQuantity = parseInt(document.getElementById(`quantity-${productId}`).value, 10);
+    updateQuantity(productId, newQuantity);
+}
+</script>
