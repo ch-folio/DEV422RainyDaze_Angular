@@ -36,6 +36,43 @@
             });
             });
 
+
+function updateQuantity(productId, newQuantity) {
+    const item = cart.find(item => item.product.id === productId);
+    if (item) {
+        item.quantity = newQuantity;
+        updateCart();
+    }
+}
+
+// Function to calculate and update the total in the cart
+function updateTotal() {
+    const totalElement = document.getElementById('total');
+    const total = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
+    totalElement.textContent = total.toFixed(2);
+}
+              
+              function generateCartItemsHTML() {
+    const cartItemsContainer = document.querySelector('.cart-items');
+
+    // Clear previous items
+    cartItemsContainer.innerHTML = '';
+
+    // Populate cart items
+    cart.forEach(item => {
+        const cartItemElement = document.createElement('div');
+        cartItemElement.className = 'cart-item';
+        cartItemElement.innerHTML = `
+            <span>${item.product.name}</span>
+            <input type="number" id="quantity-${item.product.id}" value="${item.quantity}">
+            <button class="update-quantity-button" onclick="updateQuantityFromPage('${item.product.id}')">Update Quantity</button>
+            <span>$${item.product.price.toFixed(2)}</span>
+            <button class="remove-button" onclick="removeItem('${item.product.id}')">Remove</button>
+        `;
+        cartItemsContainer.appendChild(cartItemElement);
+    });
+}
+
             </script>
     </body>
 </html>

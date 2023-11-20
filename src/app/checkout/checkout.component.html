@@ -1,1 +1,62 @@
-<p>checkout works!</p>
+
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+
+    <section class="checkout-form">
+        <form id="checkoutForm">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2023 RainyDaze
+    </footer>
+
+    <script> 
+      
+    document.getElementById('checkoutForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const address = document.getElementById('address').value;
+
+    if (!fullName || !email || !address) {
+        alert('Please fill in all the required fields.');
+        return;
+    }
+
+    handleCheckout(fullName, email, address);
+});
+
+function handleCheckout(fullName, email, address) {
+
+    alert(`Order placed successfully!\nName: ${fullName}\nEmail: ${email}\nAddress: ${address}`);
+
+}
+    
+    </script> 
+</body>
+
+</html>
