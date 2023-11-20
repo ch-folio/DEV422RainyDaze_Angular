@@ -225,3 +225,17 @@ button {
     border: none;
     border-radius: 4px;
 }
+
+.banner-container {
+    display: flex;
+    height: 200px; 
+  }
+  
+  .banner1, .banner2 {
+    flex: 1;
+  }
+  
+  .banner1 img, .banner2 img {
+    width: 100%; 
+    object-fit: cover; 
+  }
