@@ -1,4 +1,30 @@
-<div class="product-details">
+
+
+
+<div class="product-details-container">
+    <h1>{{ product?.name }}</h1>
+    <div class="product-item">
+      <img src="{{ product?.imageUrl }}" alt="{{ product?.name }}">
+      <div class="product-item-description">
+        <h2> Product Information</h2>
+        <h3 class="product">{{ product!.name }}</h3>
+        <h3>Color: {{ product!.color }}</h3><br/>
+        <h3><b>{{ product!.price | currency }}</b></h3><br/>
+        <h3>Size: {{ product!.size }}</h3><br/>
+        <h3>Item # <u>{{ product!._id }}</u></h3><br/>
+        <p>{{product!.category?.name}}</p>
+      </div>
+      <div class="product-item-price"></div>
+      <div class="product-item-add-to-cart">
+        <button (click)="addToCart()">Add to Cart</button>
+      </div>
+      <hr/>
+    </div>
+  
+  </div>
+  
+
+<!-- <div class="product-details">
     <h2>Product Title</h2>
     <img src="product_image.jpg" alt="Product Image">
     <p>Product description goes here...</p>
@@ -25,4 +51,4 @@ function updateQuantityFromPage(productId) {
     const newQuantity = parseInt(document.getElementById(`quantity-${productId}`).value, 10);
     updateQuantity(productId, newQuantity);
 }
-</script>
+</script> -->
